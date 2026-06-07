@@ -1,7 +1,0 @@
-<svg width="220" height="64" viewBox="0 0 220 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="64" height="64" rx="10" fill="#0C2340"/>
-  <path d="M15 43V17h16c10 0 18 8 18 18 0 4-1 8-4 11l5 5-8 2-3-3a19 19 0 0 1-8 2c-6 0-12-3-16-9Z" fill="#D4A017"/>
-  <path d="M27 29h11v8H27z" fill="#0C2340"/>
-  <text x="78" y="29" font-family="Poppins, Arial" font-weight="800" font-size="21" fill="#0C2340">QAMS</text>
-  <text x="78" y="49" font-family="Inter, Arial" font-weight="600" font-size="15" fill="#D4A017">GLOBAL</text>
-</svg>
