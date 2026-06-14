@@ -31,6 +31,10 @@ const limiter = rateLimit({
 });
 app.use(limiter);
 
+app.get('/', (req, res) => {
+  res.json({ success: true, message: 'The Royals API' });
+});
+
 app.get('/api/health', (req, res) => {
   res.json({ success: true, message: 'Server is running' });
 });
