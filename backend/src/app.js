@@ -5,7 +5,6 @@ import helmet from 'helmet';
 import morgan from 'morgan';
 import rateLimit from 'express-rate-limit';
 import connectDB from './config/db.js';
-import configureCloudinary from './config/cloudinary.js';
 import { corsOptions } from './middleware/cors.middleware.js';
 import errorHandler from './middleware/error.middleware.js';
 
@@ -16,8 +15,6 @@ import publicTestimonialRoutes from './routes/public/testimonial.routes.js';
 import publicReservationRoutes from './routes/public/reservation.routes.js';
 
 const app = express();
-
-configureCloudinary();
 
 app.use(cors(corsOptions));
 

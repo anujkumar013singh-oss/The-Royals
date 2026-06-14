@@ -13,17 +13,10 @@ const reservationSchema = new mongoose.Schema(
     specialRequests: { type: String, default: '' },
     status: {
       type: String,
-      enum: ['payment_pending', 'confirmed', 'cancelled', 'failed'],
-      default: 'payment_pending',
+      enum: ['confirmed', 'cancelled'],
+      default: 'confirmed',
     },
     bookingId: { type: String, unique: true, sparse: true },
-    razorpayOrderId: { type: String },
-    razorpayQRId: { type: String },
-    razorpayQRImageUrl: { type: String },
-    razorpayPaymentId: { type: String },
-    amountPaid: { type: Number, default: 100 },
-    paymentVerifiedAt: { type: Date },
-    receiptSentTo: { type: String },
   },
   { timestamps: true }
 );

@@ -12,7 +12,7 @@ import { useSiteContext } from '../../context/SiteContext';
 const defaultSlides = [
   { heading: 'THE ROYALS', subtitle: 'An Exquisite Fine Dining Experience', imageUrl: 'https://images.trvl-media.com/place/6078905/9872e50e-6415-4220-8e8e-9924d3db98f0.jpg', cta1: { text: 'View Menu', to: '/menu' }, cta2: { text: 'Reserve a Table', to: '/reservations' } },
   { heading: 'Culinary Excellence', subtitle: 'Crafted with Passion, Served with Elegance', imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/6/62/Barbieri_-_ViaSophia25668.jpg', cta1: { text: 'Our Story', to: '/about' }, cta2: { text: 'View Menu', to: '/menu' } },
-  { heading: 'A Taste of Luxury', subtitle: 'Where Every Meal is a Royal Affair', imageUrl: 'https://foodandbeverage-accor.imgix.net/https%3A%2F%2Fwww.ahstatic.com%2Fphotos%2F1400_rsr002_00_p_3000x2250.jpg?ixlib=js-3.8.0&auto=compress&fm=webp&s=341715ecbbb3826a26bb320762deca85', cta1: { text: 'Reserve Now', to: '/reservations' }, cta2: { text: 'Explore Gallery', to: '/gallery' } },
+  { heading: 'A Taste of Luxury', subtitle: 'Where Every Meal is a Royal Affair', imageUrl: 'https://foodandbeverage-accor.imgix.net/https%3A%2F%2Fwww.ahstatic.com%2Fphotos%2F1400_rsr002_00_p_3000x2250.jpg?ixlib=js-3.8.0&auto=compress&fm=webp&s=341715ecbbb3826a26bb320762deca85', cta1: { text: 'Reserve Now', to: '/reservations' }, cta2: { text: 'View Menu', to: '/menu' } },
 ];
 
 function HeroSlider() {

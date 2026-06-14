@@ -1,5 +1,4 @@
 import 'dotenv/config';
-import bcrypt from 'bcryptjs';
 import mongoose from 'mongoose';
 import MenuItem from '../models/MenuItem.js';
 import Testimonial from '../models/Testimonial.js';
@@ -121,16 +120,6 @@ const seed = async () => {
     await mongoose.connect(process.env.MONGO_URI);
     console.log('MongoDB connected');
 
-    // Admin credentials check
-    if (!process.env.ADMIN_PASSWORD_HASH) {
-      const hash = await bcrypt.hash('admin123', 12);
-      console.log('\n⚠ ADMIN_PASSWORD_HASH not found in .env');
-      console.log('   Generated hash for password "admin123":');
-      console.log(`   ADMIN_PASSWORD_HASH=${hash}\n`);
-    } else {
-      console.log('✓ Admin credentials found in .env');
-    }
-
     // Menu Items
     await MenuItem.deleteMany({});
     let orderCounter = 0;
@@ -223,8 +212,6 @@ const seed = async () => {
     console.log('✓ Seeded about content with story, vision, and team');
 
     console.log('\n🎉 Seed completed successfully!\n');
-    console.log('📧 Admin Email: admin@restaurant.com');
-    console.log('🔑 Admin Password: admin123\n');
 
     process.exit(0);
   } catch (error) {
