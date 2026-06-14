@@ -168,9 +168,9 @@ const seed = async () => {
       restaurantName: 'The Royals',
       tagline: 'Where Every Meal is a Royal Affair',
       heroSlides: [
-        { imageUrl: img('Hero+Slide+1'), imageId: '', title: 'Fine Dining Experience', subtitle: 'Where Every Meal is a Royal Affair' },
-        { imageUrl: img('Hero+Slide+2'), imageId: '', title: 'Exquisite Cuisine', subtitle: 'Crafted by World-Class Chefs' },
-        { imageUrl: img('Hero+Slide+3'), imageId: '', title: 'Royal Ambiance', subtitle: 'An Unforgettable Evening Awaits' },
+        { imageUrl: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1600&q=80', imageId: '', title: 'Fine Dining Experience', subtitle: 'Where Every Meal is a Royal Affair' },
+        { imageUrl: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1600&q=80', imageId: '', title: 'Exquisite Cuisine', subtitle: 'Crafted by World-Class Chefs' },
+        { imageUrl: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1600&q=80', imageId: '', title: 'Royal Ambiance', subtitle: 'An Unforgettable Evening Awaits' },
       ],
       address: '42 Gourmet Street, Fine Dining District, Mumbai 400001',
       phone: '+91 22 4567 8900',

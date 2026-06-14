@@ -21,14 +21,13 @@ function HeroSlider() {
   const scrollTimerRef = useRef(null);
 
   const rawSlides = settings?.heroSlides?.length ? settings.heroSlides : null;
-  const hasValidImages = rawSlides?.some((s) => s.imageUrl);
-  const slides = rawSlides && hasValidImages
+  const slides = rawSlides
     ? rawSlides.map((s) => ({
         heading: s.title || 'THE ROYALS',
         subtitle: s.subtitle || 'An Exquisite Fine Dining Experience',
         cta1: { text: 'View Menu', to: '/menu' },
         cta2: { text: 'Reserve a Table', to: '/reservations' },
-        imageUrl: s.imageUrl,
+        imageUrl: s.imageUrl || '',
       }))
     : defaultSlides;
 
@@ -107,10 +106,11 @@ function HeroSlider() {
       >
         {slides.map((slide, idx) => (
           <SwiperSlide key={idx} className="relative">
-            {slide.imageUrl && (
-              <img src={slide.imageUrl} alt="" className="absolute inset-0 w-full h-full object-cover opacity-60" />
-            )}
-            <div className="absolute inset-0 bg-royal-black/40" />
+            <div className="absolute inset-0 bg-royal-black">
+              {slide.imageUrl && (
+                <img src={slide.imageUrl} alt="" className="w-full h-full object-cover" loading={idx === 0 ? 'eager' : 'lazy'} />
+              )}
+            </div>
             <div className="absolute inset-0 bg-gradient-to-b from-royal-black/70 via-royal-black/40 to-royal-black/80" />
             <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-4">
               <h1 className="hero-heading font-heading text-4xl sm:text-6xl md:text-7xl lg:text-8xl text-white font-light leading-none mb-6">
