@@ -1,0 +1,18 @@
+.gold-reveal {
+  scale: 0 1;
+  transform-origin: left;
+}
+
+.gold-reveal-center {
+  scale: 0 1;
+  transform-origin: center;
+}
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.fade-in {
+  opacity: 0;
+}
